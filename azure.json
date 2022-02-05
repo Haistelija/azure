@@ -31,7 +31,7 @@
     },
     "publicIpName": {
       "type": "string",
-      "defaultValue": "myPublicIP",
+      "defaultValue": "JaroIP",
       "metadata": {
         "description": "Name for the Public IP used to access the Virtual Machine."
       }
@@ -78,7 +78,7 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_D2s_v3",
+      "defaultValue": "Standard_B1s",
       "metadata": {
         "description": "Size of the virtual machine."
       }
@@ -92,7 +92,7 @@
     },
     "vmName": {
       "type": "string",
-      "defaultValue": "simple-vm",
+      "defaultValue": "testiVM",
       "metadata": {
         "description": "Name of the virtual machine."
       }
@@ -100,11 +100,11 @@
   },
    "variables": {
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
-    "nicName": "myVMNic",
+    "nicName": "testiVMnic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "virtualNetworkName": "MyVNET",
+    "virtualNetworkName": "TestiVNET",
     "networkSecurityGroupName": "default-NSG"
   },
   "resources": [
